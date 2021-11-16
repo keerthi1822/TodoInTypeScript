@@ -12,7 +12,7 @@ const Todo = ({todo}:props) => {
         <>
         {
             todo.taskName && <li>
-            {todo.taskName}
+           Finish {' '}{todo.taskName}{' '} in {' '}{todo.deadLine}-day{todo.deadLine === 1? '':'s'}
        </li>
         }
        </>

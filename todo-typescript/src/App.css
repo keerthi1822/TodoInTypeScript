@@ -1,0 +1,27 @@
+.header-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightsalmon;
+  width: 100vw;
+  height: 20vh;
+}
+
+.header-todo * {
+  border: none;
+  margin: 2px;
+  height: 20px;
+}
+
+.header-todo *:hover,
+.header-todo *:active,
+.header-todo *:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.no-List,
+.list-ul {
+  margin: 20px auto;
+  width: fit-content;
+}

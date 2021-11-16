@@ -28,11 +28,9 @@ const App: FC = () => {
   console.log(todoList);
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
-      <div>
-        <section>
+    <div className='todo-App'>
+      <header className='header-todo'>
+       
           <input
             type="text"
             value={task}
@@ -47,21 +45,21 @@ const App: FC = () => {
             placeholder="Add deadline in days.."
             onChange={handleChange}
           ></input>
-        </section>
-        <button onClick={handleAddTask} style={{ width: "100%" }}>
+     
+        <button onClick={handleAddTask}>
           +
         </button>
-      </div>
+      </header>
 
-      <div>
+      <div className='list-div'>
         {todoList.length ? (
-          <ul>
+          <ul className='list-ul'>
             {todoList.map((todo: ITask, key: number) => {
               return <Todo todo={todo} key={key} />;
             })}
           </ul>
         ) : (
-          "no todos listed"
+          <p className='no-List'>no todos listed</p>
         )}
       </div>
     </div>
